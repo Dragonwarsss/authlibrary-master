@@ -1,0 +1,11 @@
+<div class="search_bar">
+  <p>Search-bar Works!</p>
+</div>
+<input [(ngModel)]="title" placeholder="Search books"/>
+<div *ngFor="let book of books; let i = index">
+  <button class="list-group-item"
+  *ngIf="toSearchArray([title], book)"
+  (click)="onViewBook(i)">
+  <h4>{{book.title}} {{i}}</h4>
+  </button>
+</div>
