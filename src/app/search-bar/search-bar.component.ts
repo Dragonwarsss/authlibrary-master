@@ -52,23 +52,19 @@ export class SearchBarComponent implements OnInit {
     var tmp = false;
     if (!elem)
       return false;
-    console.log(sbook.author);
     
     for (var i = 0; i != arr.length; i++) {
       for (var j = 0, tmp = false; j != arr_title.length; j++) {
-        console.log('Comparing ' + arr_title[j] + ' and ' + arr[i]);
         if (arr_title[j].includes(arr[i])) {
           num += 1;
           tmp = true;
         }
         if (tmp == false) {
-          console.log('Error: Something miss match: ' + arr + '\n' + arr_title);
           return false;
         }
       }
       if (num < 0)
         return false;
-      console.log('resetting');
     }
     if (num > 0)
       return true;
