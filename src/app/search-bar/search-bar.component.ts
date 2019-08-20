@@ -60,6 +60,8 @@ export class SearchBarComponent implements OnInit {
           tmp = true;
         }
       }
+      if (tmp == false)
+        return false;
     }
     if (num > 0)
       return true;
