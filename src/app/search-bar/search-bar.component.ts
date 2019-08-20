@@ -45,13 +45,13 @@ export class SearchBarComponent implements OnInit {
   }
 
   toSearchArray(elem: string, sbook: Book): boolean {
-    var arr = (elem + '').split(' ');
+    var arr = (elem + '').split(' ');                 //Search Key Array
     var arr_author = (sbook.author + '').split(' ');
     var arr_title = (sbook.title + '').split(' ');
     var num = 0;
     var tmp = false;
     if (!elem)
-      return false;
+      return true;
     
     for (var i = 0; i != arr.length; i++) {
       for (var j = 0, tmp = false; j != arr_title.length; j++) {
@@ -59,12 +59,7 @@ export class SearchBarComponent implements OnInit {
           num += 1;
           tmp = true;
         }
-        if (tmp == false) {
-          return false;
-        }
       }
-      if (num < 0)
-        return false;
     }
     if (num > 0)
       return true;
