@@ -41,7 +41,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   onViewBook(id: number) {
-    console.log(this.books[id].synopsis);
+    this.router.navigate(['/books', 'view', id]);
   }
 
   toSearchArray(elem: string, sbook: Book): boolean {
