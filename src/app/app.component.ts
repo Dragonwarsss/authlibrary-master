@@ -7,6 +7,10 @@ import * as firebase from 'firebase';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+
+  lat = 51.678418;
+  lng = 7.809007;
+
   constructor() {
     const firebaseConfig = {
       apiKey: "AIzaSyAqL4oF6P6kVFKKN40kHm2CXARmbgVBH3c",
