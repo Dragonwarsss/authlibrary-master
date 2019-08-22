@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import {MatNativeDateModule} from '@angular/material/core';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -22,6 +23,7 @@ import { BooksService } from './services/books.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FileSizePipe } from './pipes/file-size.pipe';
+import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
@@ -30,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'books/new', canActivate: [AuthGuardService], component: BookFormComponent },
   { path: 'books/view/:id', canActivate: [AuthGuardService], component: SingleBookComponent },
   { path: 'search', canActivate: [AuthGuardService], component: SearchBarComponent },
+  { path: 'map', component: MapComponent},
   { path: '', redirectTo: 'books', pathMatch: 'full' },
   { path: '**', redirectTo: 'books' },
 ];
@@ -43,8 +46,11 @@ const appRoutes: Routes = [
     HttpClientModule,
     MatNativeDateModule,
     RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBbbkT7BgFryO6kAS3xOcuZXMppy7KwbmE'
+    }),
   ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, SigninComponent, BookListComponent, SingleBookComponent, BookFormComponent, HeaderComponent, SearchBarComponent, FileSizePipe ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, SigninComponent, BookListComponent, SingleBookComponent, BookFormComponent, HeaderComponent, SearchBarComponent, FileSizePipe, MapComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService, BooksService, AuthGuardService],
 })
