@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase';
+import * as elastic from '@elastic/elasticSearch';
 
 @Component({
   selector: 'my-app',
@@ -10,6 +11,8 @@ export class AppComponent  {
 
   lat = 51.678418;
   lng = 7.809007;
+
+  client;
 
   constructor() {
     const firebaseConfig = {

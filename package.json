@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@agm/core": "^1.0.0-beta.7",
+    "@agm/core": "1.0.0-beta.7",
     "@angular/animations": "9.0.0-next.0",
     "@angular/cdk": "8.1.2",
     "@angular/common": "8.2.0",
@@ -15,13 +15,15 @@
     "@angular/platform-browser": "8.2.0",
     "@angular/platform-browser-dynamic": "8.2.0",
     "@angular/router": "8.2.0",
-    "angular-bootstrap-md": "^8.1.1",
+    "@elastic/elasticsearch": "7.3.0",
+    "@firebase/app": "^0.4.15",
+    "angular-bootstrap-md": "8.2.0",
     "bootstrap": "3.3.7",
     "core-js": "2.6.9",
-    "firebase": "^6.3.5",
+    "firebase": "6.4.2",
     "rxjs": "6.5.2",
-    "rxjs-compat": "^6.5.2",
-    "tslib": "^1.10.0",
+    "rxjs-compat": "6.5.2",
+    "tslib": "1.10.0",
     "zone.js": "0.9.1"
   },
   "scripts": {
