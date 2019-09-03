@@ -62,7 +62,7 @@ export class BooksService {
       this.user = firebase.auth().currentUser.email.replace('.', '');
       return;
     }
-    if(book.photo) {
+    if (book.photo) {
       const storageRef = firebase.storage().refFromURL(book.photo);
       storageRef.delete().then(
         () => {
@@ -75,7 +75,7 @@ export class BooksService {
     }
     const bookIndexToRemove = this.books.findIndex(
       (bookEl) => {
-        if(bookEl === book) {
+        if (bookEl === book) {
           return true;
         }
       }
