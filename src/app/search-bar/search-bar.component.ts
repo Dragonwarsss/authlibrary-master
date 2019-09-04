@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { Book } from '../models/book.model';
 import { Subscription } from 'rxjs/Subscription';
 import { FileSizePipe } from '../pipes/file-size.pipe';
+import * as elasticsearch from '@elastic/elasticsearch';
+import { Client } from '@elastic/elasticsearch';
 
 @Component({
   selector: 'app-search-bar',
@@ -18,6 +20,7 @@ export class SearchBarComponent implements OnInit {
   title: string;
   books: Book[];
   booksSubscription: Subscription;
+  private client: elasticsearch.Client;
 
   constructor(private authService: AuthService,
               private formBuilder: FormBuilder,
@@ -72,5 +75,12 @@ export class SearchBarComponent implements OnInit {
     if (num > 0)
       return true;
     return false;
+  }
+
+   private connect() {
+    /*this.client = new elasticsearch.Client({
+      host: 'localhost:9200',
+      log: 'trace'
+    });*/
   }
 }

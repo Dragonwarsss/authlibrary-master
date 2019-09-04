@@ -1,9 +1,0 @@
-char *err_msg;
-
-if (!(err_msg = check_length(image.len, 5))
-&& !(err_msg = check_content_type_image(image.name)))
-  printf("upload successful");
-else {
-  printf("%s\n", err_msg);
-  free(err_msg);
-}
