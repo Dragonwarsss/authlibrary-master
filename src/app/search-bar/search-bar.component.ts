@@ -7,7 +7,7 @@ import { Book } from '../models/book.model';
 import { Subscription } from 'rxjs/Subscription';
 import { FileSizePipe } from '../pipes/file-size.pipe';
 import * as elasticsearch from '@elastic/elasticsearch';
-import { Client } from '@elastic/elasticsearch';
+import { Client } from '';
 
 @Component({
   selector: 'app-search-bar',
