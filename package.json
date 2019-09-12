@@ -15,7 +15,7 @@
     "@angular/platform-browser": "8.2.0",
     "@angular/platform-browser-dynamic": "8.2.0",
     "@angular/router": "8.2.0",
-    "@elastic/elasticsearch": "7.3.0",
+    "@elastic/elasticsearch": "^7.3.0",
     "@firebase/app": "0.4.15",
     "angular-bootstrap-md": "8.2.0",
     "bootstrap": "3.3.7",
