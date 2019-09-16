@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Book } from '../models/book.model';
 import * as firebase from 'firebase';
+import * as firedb from 'firebase/database';
 import DataSnapshot = firebase.database.DataSnapshot;
 
 @Injectable()
