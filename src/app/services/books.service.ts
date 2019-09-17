@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Book } from '../models/book.model';
-import * as firebase from '@firebase/database';
+import * as firebase from 'firebase';
 import 'firebase/database';
 import DataSnapshot = firebase.database.DataSnapshot;
 
